@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{%block content%}
+<br>
+<div class ="post-entry">
+	<h2>{{object.title}}</h2>
+		<p>{{object.body}}</p>
+		{{object.author}}
+
+<a href="{% url 'edit' object.id %}">edit</a>
+<a href="{%url 'delete' object.id %}">delete</a>
+	<a href="{% url 'home' %}">back</a>
+</div>
+{%endblock%}
